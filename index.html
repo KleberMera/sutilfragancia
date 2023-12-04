@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" />
+
+    <title>Sutil Fragancia - Iniciar Sesión</title>
+  </head>
+  <body background="IMG//fondodeinicio.webp">
+    <div class="login-container">
+      <h2>Iniciar Sesión</h2>
+      <form id="loginForm">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required />
+
+        <button type="button" onclick="validateLogin()">Iniciar Sesión</button>
+      </form>
+      <p>¿No tienes una cuenta? <a href="register.html">Regístrate aquí</a>.</p>
+      <p id="error-message" class="error-message"></p>
+    </div>
+    <script src="JS/script.js"></script>
+  </body>
+</html>
