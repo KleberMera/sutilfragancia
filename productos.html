@@ -12,9 +12,10 @@
         <h1>Bienvenido a Sutil Fragancia</h1>
         <nav>
           <ul>
+            <li><a href="agregados.html">Agregados</a></li>
+            <li><a href="productos.html">Productos</a></li>
             <li id="login-status">Cerrar Sesión</li>
             <!-- Otros elementos del menú -->
-            <li><a href="productos.html">Productos</a></li>
           </ul>
         </nav>
       </header>
@@ -26,7 +27,17 @@
         <h2>Perfume Floral Elegante</h2>
         <p>Descripción del perfume y detalles adicionales.</p>
         <p class="precio">$50.00</p>
-        <button>Agregar al Carrito</button>
+        <p class="disponibilidad">Disponibles: <span>10</span></p>
+        <!-- Agregar la sección de precio -->
+        <div class="cantidad-container">
+          <button class="cantidad-btn" id="menos">-</button>
+          <span class="cantidad">1</span>
+          <button class="cantidad-btn" id="mas">+</button>
+        </div>
+        <button class="agregar-carrito-btn">Agregar al Carrito</button>
+        <button class="agregar-carrito-btn agregado-btn" style="display: none">
+          Agregado
+        </button>
       </article>
 
       <article class="producto">

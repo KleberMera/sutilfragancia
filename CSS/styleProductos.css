@@ -87,3 +87,49 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+
+/* Agregar al final de tu archivo CSS */
+
+article.producto .cantidad-container {
+  margin-top: 10px;
+}
+
+article.producto .cantidad-btn {
+  background-color: #800080;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+article.producto .cantidad {
+  font-size: 1.2em;
+  margin: 0 10px;
+}
+
+article.producto .agregar-carrito-btn {
+  background-color: #800080;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+article.producto .agregado-btn {
+  background-color: #fff;
+  color: #800080;
+  padding: 10px;
+  border: 2px solid #ffffff;
+  cursor: not-allowed;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.cantidad{
+  color:#fff;
+}

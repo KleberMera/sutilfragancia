@@ -1,32 +1,31 @@
 // En el archivo script.js
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Verificar si hay un usuario autenticado almacenado en localStorage
-  var loggedInUser = localStorage.getItem('loggedInUser');
+  var loggedInUser = localStorage.getItem("loggedInUser");
   var loginStatusElement = document.getElementById("login-status");
 
   if (loggedInUser) {
-      // Si hay un usuario autenticado, mostrar "Cerrar Sesión" y el nombre de usuario
-      loginStatusElement.innerHTML = "Cerrar Sesión - " + loggedInUser;
+    // Si hay un usuario autenticado, mostrar "Cerrar Sesión" y el nombre de usuario
+    loginStatusElement.innerHTML = "Cerrar Sesión - " + loggedInUser;
   } else {
-      // Si no hay un usuario autenticado, mostrar "Inicio de Sesión"
-      loginStatusElement.innerHTML = "Inicio de Sesión";
+    // Si no hay un usuario autenticado, mostrar "Inicio de Sesión"
+    loginStatusElement.innerHTML = "Inicio de Sesión";
   }
 
-  loginStatusElement.addEventListener("click", function() {
-      var confirmation = confirm("¿Estás seguro de que deseas cerrar sesión?");
+  loginStatusElement.addEventListener("click", function () {
+    var confirmation = confirm("¿Estás seguro de que deseas cerrar sesión?");
 
-      if (confirmation) {
-          // Limpiar el usuario autenticado al cerrar sesión
-          localStorage.removeItem('loggedInUser');
+    if (confirmation) {
+      // Limpiar el usuario autenticado al cerrar sesión
+      localStorage.removeItem("loggedInUser");
 
-          // Redirigir al índice u otra página
-          window.location.href = "index.html";
-      }
+      // Redirigir al índice u otra página
+      window.location.href = "index.html";
+    }
   });
 
   // Resto del código de script.js, como la función validateLogin() si es necesario
 });
-
 
 function validateLogin() {
   var username = document.getElementById("username").value;
@@ -51,8 +50,6 @@ function validateLogin() {
     errorMessage.innerHTML = "Usuario o contraseña incorrectos";
   }
 }
-
-
 
 function registerUser() {
   var cedula = document.getElementById("cedula").value;
@@ -123,4 +120,39 @@ document.getElementById("login-status").addEventListener("click", function () {
   }
 });
 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cantidadElement = document.querySelector('.cantidad');
+  const menosBtn = document.getElementById('menos');
+  const masBtn = document.getElementById('mas');
+  const agregarCarritoBtn = document.querySelector('.agregar-carrito-btn');
+  const agregadoBtn = document.querySelector('.agregado-btn');
+  const disponibilidadElement = document.querySelector('.disponibilidad span');
+
+  let cantidadDisponible = parseInt(disponibilidadElement.innerText); // Obtener la cantidad inicial disponible
+
+  menosBtn.addEventListener('click', function () {
+      if (parseInt(cantidadElement.innerText) > 1) {
+          cantidadElement.innerText = parseInt(cantidadElement.innerText) - 1;
+      }
+  });
+
+  masBtn.addEventListener('click', function () {
+      if (parseInt(cantidadElement.innerText) < cantidadDisponible) {
+          cantidadElement.innerText = parseInt(cantidadElement.innerText) + 1;
+      }
+  });
+
+  agregarCarritoBtn.addEventListener('click', function () {
+      const cantidadSeleccionada = parseInt(cantidadElement.innerText);
+      if (cantidadSeleccionada > 0 && cantidadSeleccionada <= cantidadDisponible) {
+          cantidadDisponible -= cantidadSeleccionada;
+          disponibilidadElement.innerText = cantidadDisponible; // Actualizar la cantidad disponible en el HTML
+          cantidadElement.innerText = '0';
+          agregarCarritoBtn.style.display = 'none';
+          agregadoBtn.style.display = 'inline-block';
+      }
+  });
+});
 
