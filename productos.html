@@ -22,7 +22,8 @@
     </div>
 
     <section class="productos">
-      <article class="producto">
+      <article class="producto" id="producto-1">
+        <!-- Información específica del producto -->
         <img src="IMG//floral.jpeg" alt="Perfume 1" />
         <h2>Perfume Floral Elegante</h2>
         <p>Descripción del perfume y detalles adicionales.</p>
@@ -30,86 +31,38 @@
         <p class="disponibilidad">Disponibles: <span>10</span></p>
         <!-- Agregar la sección de precio -->
         <div class="cantidad-container">
-          <button class="cantidad-btn" id="menos">-</button>
-          <span class="cantidad">1</span>
-          <button class="cantidad-btn" id="mas">+</button>
+          <button class="cantidad-btn menos">-</button>
+          <span class="cantidad">0</span>
+          <button class="cantidad-btn mas">+</button>
         </div>
-        <button class="agregar-carrito-btn">Agregar al Carrito</button>
+
+        <button class="agregar-carrito-btn" data-producto-id="producto-1">
+          Agregar al Carrito
+        </button>
         <button class="agregar-carrito-btn agregado-btn" style="display: none">
           Agregado
         </button>
       </article>
 
-      <article class="producto">
+      <article class="producto" id="producto-2">
+        <!-- Información específica del producto -->
         <img src="IMG//fresco.jpeg" alt="Perfume 2" />
         <h2>Perfume Fresco de Verano</h2>
         <p>Descripción del perfume y detalles adicionales.</p>
-        <p class="precio">$50.00</p>
-        <button>Agregar al Carrito</button>
-      </article>
-
-      <article class="producto">
-        <img src="IMG//fresco.jpeg" alt="Perfume 2" />
-        <h2>Perfume Fresco de Verano</h2>
-        <p>Descripción del perfume y detalles adicionales.</p>
-        <p class="precio">$50.00</p>
-        <button>Agregar al Carrito</button>
-      </article>
-
-      <article class="producto">
-        <img src="IMG//fresco.jpeg" alt="Perfume 2" />
-        <h2>Perfume Fresco de Verano</h2>
-        <p>Descripción del perfume y detalles adicionales.</p>
-        <p class="precio">$50.00</p>
-        <button>Agregar al Carrito</button>
-      </article>
-
-      <article class="producto">
-        <img src="IMG//fresco.jpeg" alt="Perfume 2" />
-        <h2>Perfume Fresco de Verano</h2>
-        <p>Descripción del perfume y detalles adicionales.</p>
-        <p class="precio">$50.00</p>
-        <button>Agregar al Carrito</button>
-      </article>
-
-      <article class="producto">
-        <img src="IMG//floral.jpeg" alt="Perfume 1" />
-        <h2>Perfume Floral Elegante</h2>
-        <p>Descripción del perfume y detalles adicionales.</p>
-        <p class="precio">$50.00</p>
-        <button>Agregar al Carrito</button>
-      </article>
-
-      <article class="producto">
-        <img src="IMG//floral.jpeg" alt="Perfume 1" />
-        <h2>Perfume Floral Elegante</h2>
-        <p>Descripción del perfume y detalles adicionales.</p>
-        <p class="precio">$50.00</p>
-        <button>Agregar al Carrito</button>
-      </article>
-
-      <article class="producto">
-        <img src="IMG//floral.jpeg" alt="Perfume 1" />
-        <h2>Perfume Floral Elegante</h2>
-        <p>Descripción del perfume y detalles adicionales.</p>
-        <p class="precio">$50.00</p>
-        <button>Agregar al Carrito</button>
-      </article>
-
-      <article class="producto">
-        <img src="IMG//floral.jpeg" alt="Perfume 1" />
-        <h2>Perfume Floral Elegante</h2>
-        <p>Descripción del perfume y detalles adicionales.</p>
-        <p class="precio">$50.00</p>
-        <button>Agregar al Carrito</button>
-      </article>
-
-      <article class="producto">
-        <img src="IMG//floral.jpeg" alt="Perfume 1" />
-        <h2>Perfume Floral Elegante</h2>
-        <p>Descripción del perfume y detalles adicionales.</p>
-        <p class="precio">$50.00</p>
-        <button>Agregar al Carrito</button>
+        <p class="precio">$60.00</p>
+        <p class="disponibilidad">Disponibles: <span>10</span></p>
+        <!-- Agregar la sección de precio -->
+        <div class="cantidad-container">
+          <button class="cantidad-btn menos">-</button>
+          <span class="cantidad">0</span>
+          <button class="cantidad-btn mas">+</button>
+        </div>
+        <button class="agregar-carrito-btn" data-producto-id="producto-2">
+          Agregar al Carrito
+        </button>
+        <button class="agregar-carrito-btn agregado-btn" style="display: none">
+          Agregado
+        </button>
       </article>
 
       <!-- Puedes agregar más artículos según sea necesario -->
@@ -118,6 +71,6 @@
     <footer>
       <p>&copy; 2023 Sutil Fragancia. Todos los derechos reservados.</p>
     </footer>
-    <script src="JS/script.js"></script>
+    <script src="JS/scriptProductos.js"></script>
   </body>
 </html>

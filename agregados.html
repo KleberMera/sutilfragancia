@@ -3,44 +3,89 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Enlace a Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="CSS/styleAgregados.css" />
-    <!-- Agregado en la sección head de agregados.html -->
-    <script src="JS/scriptAgregados.js"></script>
-
-    <title>Sutil Fragancia - Agregados</title>
   </head>
   <body>
-    <div id="header-container">
+    <div class="container-fluid">
       <header>
-        <h1>Agregados</h1>
-        <nav>
-          <ul>
-            <li id="login-status">Cerrar Sesión - Usuario</li>
-          </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+          <a class="navbar-brand" href="#">Sutil Fragancia - Agregados</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="agregados.html">Agregados</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="productos.html">Productos</a>
+              </li>
+              <li class="nav-item" id="login-status">Cerrar Sesión</li>
+            </ul>
+          </div>
         </nav>
       </header>
+
+      <section class="user-info mt-3">
+        <div class="container">
+          <div class="user-info-container">
+            <h3>Datos del Usuario</h3>
+            <p><strong>Cédula:</strong> <span id="cedulaUsuario"></span></p>
+            <p><strong>Nombres:</strong> <span id="nombresUsuario"></span></p>
+            <p>
+              <strong>Apellidos:</strong> <span id="apellidosUsuario"></span>
+            </p>
+            <p><strong>Ciudad:</strong> <span id="ciudadUsuario"></span></p>
+            <!-- Agrega más detalles del usuario según sea necesario -->
+          </div>
+        </div>
+      </section>
+
+      <section class="productos-agregados">
+        <!-- Aquí mostrarás los productos agregados y sus detalles -->
+      </section>
+
+      <section class="total">
+        <!-- Aquí mostrarás el total de todos los productos -->
+      </section>
+
+      <footer class="fixed-bottom bg-dark text-white text-center p-2">
+        <p>&copy; 2023 Sutil Fragancia. Todos los derechos reservados.</p>
+      </footer>
     </div>
 
-    <section class="detalle-usuario">
-      <!-- Detalles del usuario, si es necesario -->
-      <h2>Detalles del Usuario</h2>
-      <p>Nombre: Usuario</p>
-      <!-- Agrega más detalles del usuario según tus necesidades -->
-    </section>
-
-    <section class="detalle-productos">
-      <!-- Aquí mostrar los detalles del producto, cantidad, subtotal y total de todos los productos -->
-      <h2>Detalle de Productos Agregados</h2>
-      <div class="producto-agregado">
-        <p>Nombre del Producto: Perfume Floral Elegante</p>
-        <p>Cantidad: 3</p>
-        <p>Subtotal: $150.00</p>
-      </div>
-      <!-- Agrega más detalles según tus necesidades -->
-    </section>
-
-    <footer>
-      <p>&copy; 2023 Sutil Fragancia. Todos los derechos reservados.</p>
-    </footer>
+    <!-- Scripts de Bootstrap y scriptAgregados.js -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"
+      integrity="sha384-Mr12i9zBC7DBWe2qjNUU8ePPFYBNTf1TVqACvohsVHwnf2FaE3UHOMbYAhA1w"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy6pBvXpKpL4rL2nE6h0q2BxaujAFA8N2M"
+      crossorigin="anonymous"
+    ></script>
+    <script src="JS/scriptAgregados.js"></script>
   </body>
 </html>
