@@ -1,27 +1,3 @@
-function validateLogin() {
-  var username = document.getElementById("username").value;
-  var password = document.getElementById("password").value;
-  var errorMessage = document.getElementById("error-message");
-
-  // Obtener los usuarios de localStorage
-  var existingUsers = JSON.parse(localStorage.getItem("users")) || [];
-
-  // Verificar las credenciales
-  var userFound = existingUsers.find(
-    (user) => user.username === username && user.password === password
-  );
-
-  if (userFound) {
-    // Almacenar el nombre de usuario en localStorage para mostrarlo después
-    localStorage.setItem("loggedInUser", username);
-
-    // Redirigir a la página de productos
-    window.location.href = "productos.html";
-  } else {
-    errorMessage.innerHTML = "Usuario o contraseña incorrectos";
-  }
-}
-
 function registerUser() {
   var cedula = document.getElementById("cedula").value;
   var nombres = document.getElementById("nombres").value;
@@ -32,6 +8,21 @@ function registerUser() {
   var newUsername = document.getElementById("newUsername").value;
   var newPassword = document.getElementById("newPassword").value;
   var errorMessage = document.getElementById("error-message");
+
+  // Validar que todos los campos estén llenos
+  if (
+    !cedula ||
+    !nombres ||
+    !apellidos ||
+    !fechaNacimiento ||
+    !nacionalidad ||
+    !ciudad ||
+    !newUsername ||
+    !newPassword
+  ) {
+    alert("Completa todos los campos para registrarte.");
+    return; // Salir de la función si algún campo está vacío
+  }
 
   // Crear un objeto con los datos del usuario
   var userData = {
@@ -61,8 +52,31 @@ function registerUser() {
     alert("¡Registro exitoso! Ahora puedes iniciar sesión.");
     window.location.href = "index.html";
   } else {
-    errorMessage.innerHTML =
-      "Este usuario ya existe. Por favor, elige otro nombre de usuario.";
+    alert("Este usuario ya existe. Por favor, elige otro nombre de usuario.");
+  }
+}
+
+function validateLogin() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  var errorMessage = document.getElementById("error-message");
+
+  // Obtener los usuarios de localStorage
+  var existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+  // Verificar las credenciales
+  var userFound = existingUsers.find(
+    (user) => user.username === username && user.password === password
+  );
+
+  if (userFound) {
+    // Almacenar el nombre de usuario en localStorage para mostrarlo después
+    localStorage.setItem("loggedInUser", username);
+
+    // Redirigir a la página de productos
+    window.location.href = "productos.html";
+  } else {
+    errorMessage.innerHTML = "Usuario o contraseña incorrectos";
   }
 }
 

@@ -3,8 +3,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: #250720;
+  min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -20,10 +19,6 @@ body {
   max-width: 400px;
   width: 100%;
   position: relative;
-
-  @media only screen and (max-width: 767px) {
-    margin-right: 0; /* Se quita el margen en dispositivos móviles */
-  }
 }
 
 h2 {
@@ -79,4 +74,15 @@ button:hover {
 
 .back-to-index:hover {
   background-color: #000000;
+}
+
+/* Estilos responsivos */
+@media only screen and (max-width: 767px) {
+  .register-container {
+    padding: 30px;
+  }
+
+  .back-to-index {
+    right: 5%;
+  }
 }

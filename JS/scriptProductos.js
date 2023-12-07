@@ -1,5 +1,10 @@
-// En el archivo script.js
 document.addEventListener("DOMContentLoaded", function () {
+  MonitoreodeLogin();
+  MonitoreodeProductos();
+  ProductosAgregaos();
+});
+
+function MonitoreodeLogin() {
   // Verificar si hay un usuario autenticado almacenado en localStorage
   var loggedInUser = localStorage.getItem("loggedInUser");
   var loginStatusElement = document.getElementById("login-status");
@@ -23,9 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "index.html";
     }
   });
-});
+}
 
-document.addEventListener("DOMContentLoaded", function () {
+function MonitoreodeProductos() {
   // Obtener todos los elementos con la clase "producto"
   const productos = document.querySelectorAll(".producto");
 
@@ -78,9 +83,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-});
+}
 
-document.addEventListener("DOMContentLoaded", function () {
+function ProductosAgregaos() {
   // Obtén la sección de productos
   const productosSection = document.querySelector(".productos");
 
@@ -107,26 +112,26 @@ document.addEventListener("DOMContentLoaded", function () {
       agregarAlCarrito(producto);
     }
   });
+}
 
-  function agregarAlCarrito(producto) {
-    // Obtén el carrito desde el localStorage
-    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+function agregarAlCarrito(producto) {
+  // Obtén el carrito desde el localStorage
+  const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-    // Verifica si el producto ya está en el carrito
-    const productoExistente = carrito.find((p) => p.id === producto.id);
+  // Verifica si el producto ya está en el carrito
+  const productoExistente = carrito.find((p) => p.id === producto.id);
 
-    if (productoExistente) {
-      // Si el producto ya está en el carrito, actualiza la cantidad
-      productoExistente.cantidad += producto.cantidad;
-    } else {
-      // Si el producto no está en el carrito, agrégalo
-      carrito.push(producto);
-    }
-
-    // Almacena el carrito actualizado en el localStorage
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-
-    // Ejemplo: Imprimir el carrito en la consola
-    console.log("Carrito actualizado:", carrito);
+  if (productoExistente) {
+    // Si el producto ya está en el carrito, actualiza la cantidad
+    productoExistente.cantidad += producto.cantidad;
+  } else {
+    // Si el producto no está en el carrito, agrégalo
+    carrito.push(producto);
   }
-});
+
+  // Almacena el carrito actualizado en el localStorage
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+
+  // Ejemplo: Imprimir el carrito en la consola
+  console.log("Carrito actualizado:", carrito);
+}

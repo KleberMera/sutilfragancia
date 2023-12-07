@@ -1,9 +1,13 @@
 /* Agregado en styleAgregados.css */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  margin-bottom: 100px; /* Ajusta este valor según sea necesario para evitar que el footer se solape con el contenido */
 }
+
+/* ... (resto del CSS) ... */
 
 header {
   background-color: #000000;
@@ -43,40 +47,15 @@ footer {
   width: 100%;
 }
 
-/* Agregados a styleAgregados.css */
+/* Estilos generales para secciones */
 
-.productos-agregados {
-  margin-top: 20px;
+section {
+  margin: 20px;
 }
 
-.producto-agregado {
-  border: 1px solid #ddd;
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  background-color: #f8f8f8;
-}
+/* Estilos para la sección de usuario */
 
-.producto-agregado h3 {
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.producto-agregado p {
-  margin: 8px 0;
-}
-
-.total {
-  margin-top: 20px;
-  text-align: right;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #333;
-}
-
-/* Agregar más estilos según sea necesario */
-/* Agrega este estilo a tu archivo CSS existente o crea uno nuevo */
-
+/* Estilos para la sección de usuario */
 .user-info {
   background-color: #f7f7f7;
   padding: 20px;
@@ -102,4 +81,81 @@ footer {
 
 .user-info strong {
   color: #555;
+  font-weight: bold; /* Agregado para hacer el texto en negrita */
+}
+
+/* Estilos para la sección de productos agregados */
+
+.productos-agregados {
+  margin-top: 20px;
+}
+
+.producto-agregado {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  background-color: #f8f8f8;
+}
+
+.producto-agregado h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.producto-agregado p {
+  margin: 8px 0;
+}
+
+/* Estilos generales para productos agregados */
+.producto-agregado {
+  margin-bottom: 20px;
+}
+
+.eliminar-producto-btn {
+  background-color: #ff3333; /* Color rojo */
+  color: #fff;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.eliminar-producto-btn:hover {
+  background-color: rgb(204, 0, 133); /* Color rojo más oscuro al pasar el mouse */
+}
+
+/* Estilos para la sección de total */
+
+.total {
+  text-align: right;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+ 
+}
+
+.total:hover{
+  background-color: rgb(141, 21, 95);
+  color: #f7f7f7;
+}
+
+/* Estilos responsivos */
+
+@media (max-width: 767px) {
+  .user-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-info-container {
+    max-width: 100%;
+  }
 }
