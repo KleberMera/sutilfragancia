@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   MonitoreodeLogin();
   MonitoreodeProductos();
   ProductosAgregaos();
+  descripcionProductos();
 });
 
 function MonitoreodeLogin() {
@@ -134,4 +135,21 @@ function agregarAlCarrito(producto) {
 
   // Ejemplo: Imprimir el carrito en la consola
   console.log("Carrito actualizado:", carrito);
+}
+
+
+
+function descripcionProductos() {
+  const productos = document.querySelectorAll(".producto");
+
+  productos.forEach((producto) => {
+    const descripcion = producto.querySelector(".descripcion");
+    const contenidoCompleto = descripcion.querySelector(".contenido-completo");
+
+    // Agrega un manejador de clic para mostrar/ocultar el contenido completo
+    descripcion.addEventListener("click", function () {
+      contenidoCompleto.style.display =
+        contenidoCompleto.style.display === "none" ? "inline" : "none";
+    });
+  });
 }

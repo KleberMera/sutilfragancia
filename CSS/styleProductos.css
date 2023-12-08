@@ -36,6 +36,13 @@ section.productos {
   padding: 20px;
 }
 
+.producto:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
 article.producto {
   border: 1px solid #ccc;
   margin: 10px;
@@ -89,7 +96,6 @@ footer {
   width: 100%;
 }
 
-
 /* Agregar al final de tu archivo CSS */
 
 article.producto .cantidad-container {
@@ -131,6 +137,25 @@ article.producto .agregado-btn {
   margin-top: 10px;
 }
 
-.cantidad{
-  color:#fff;
+.cantidad {
+  color: #fff;
+}
+
+/* Agrega tus estilos CSS existentes aquí */
+
+.descripcion {
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+.descripcion:hover {
+  background-color: #800080;
+  border-radius: 10px;
+}
+
+.contenido-completo {
+  display: none;
+  font-weight: bold;
+  text-align: justify;
+  text-size-adjust: 10px;
 }
