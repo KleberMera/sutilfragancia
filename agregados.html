@@ -11,7 +11,10 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="CSS/styleAgregados.css" />
+    <!-- Agrega esto en la sección head de tu HTML -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
   </head>
+
   <body>
     <div class="container-fluid">
       <header>
@@ -63,6 +66,71 @@
 
       <section class="total">
         <!-- Aquí mostrarás el total de todos los productos -->
+      </section>
+
+      <!-- Después de la sección de "total" -->
+      <section class="procesar-pago">
+        <button id="procesar-pago-btn" class="btn-procesar-pago">
+          Procesar Pago
+        </button>
+      </section>
+
+      <div id="modalProcesarPago" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Selecciona el método de pago:</p>
+          <button id="pagoEfectivoBtn" class="btn-modal">
+            Pago en Efectivo
+          </button>
+          <button id="pagoTransferenciaBtn" class="btn-modal">
+            Pago por Transferencia
+          </button>
+
+          <!-- Agregamos el contenedor para mostrar el total -->
+          <div id="totalContainer" style="display: none">
+            <p>Total a Pagar: $<span id="totalAmount"></span></p>
+          </div>
+
+          <!-- Agregamos el campo para ingresar datos de la tarjeta -->
+          <div id="tarjetaContainer" style="display: none">
+            <label for="numTarjeta">Número de Tarjeta:</label>
+            <input
+              type="text"
+              id="numTarjeta"
+              placeholder="Ingrese el número de tarjeta"
+            />
+          </div>
+
+          <!-- Botón para confirmar el pago -->
+          <button id="confirmarPagoBtn" class="btn-modal" style="display: none">
+            Confirmar Pago
+          </button>
+        </div>
+      </div>
+
+      <section class="recibo" style="display: none">
+        <h2>Sutil Fragancias</h2>
+        <p>Pago Realizado</p>
+        <p id="fechaHora"></p>
+        <p id="cliente"></p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Productos</th>
+              <th>Cantidad</th>
+              <th>Subtotal</th>
+            </tr>
+          </thead>
+          <tbody id="detalleProductos"></tbody>
+        </table>
+
+        <p id="totalRecibo"></p>
+
+        <button id="imprimirReciboBtn" class="btn-modal">
+          Imprimir Recibo
+        </button>
+        <button id="aceptarReciboBtn" class="btn-modal">Aceptar</button>
       </section>
 
       <footer class="fixed-bottom bg-dark text-white text-center p-2">

@@ -4,7 +4,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  margin-bottom: 100px; /* Ajusta este valor según sea necesario para evitar que el footer se solape con el contenido */
+  margin-bottom: 200px; /* Ajusta este valor según sea necesario para evitar que el footer se solape con el contenido */
 }
 
 /* ... (resto del CSS) ... */
@@ -114,7 +114,7 @@ section {
 }
 
 .eliminar-producto-btn {
-  background-color: #ff3333; /* Color rojo */
+  background-color: #800080; /* Color rojo */
   color: #fff;
   padding: 8px;
   border: none;
@@ -124,7 +124,7 @@ section {
 }
 
 .eliminar-producto-btn:hover {
-  background-color: rgb(204, 0, 133); /* Color rojo más oscuro al pasar el mouse */
+  background-color: rgb(0, 0, 0); /* Color rojo más oscuro al pasar el mouse */
 }
 
 /* Estilos para la sección de total */
@@ -139,10 +139,9 @@ section {
   cursor: pointer;
   border-radius: 5px;
   margin-top: 10px;
- 
 }
 
-.total:hover{
+.total:hover {
   background-color: rgb(141, 21, 95);
   color: #f7f7f7;
 }
@@ -158,4 +157,194 @@ section {
   .user-info-container {
     max-width: 100%;
   }
+}
+
+/* Agrega estos estilos para el modal y los botones */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-procesar-pago {
+  background-color: #800080;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-modal {
+  background-color: #800080;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.btn-modal:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Estilos para la sección de recibo */
+
+.recibo {
+  display: contents;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  margin: 20px auto; /* Centrar el recibo y darle margen */
+  max-width: 600px;
+}
+
+#detalleProductos {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#detalleProductos th,
+#detalleProductos td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#detalleProductos th {
+  background-color: #f2f2f2;
+}
+
+#totalRecibo,
+#cambioRecibo,
+#fechaHora {
+  text-align: right;
+  margin-top: 10px;
+  color: #333; /* Cambiado a un tono más oscuro */
+}
+
+#cambioRecibo {
+  color: #800080; /* Color morado */
+}
+
+/* Agregado para estilos específicos del modal de procesar pago */
+#modalProcesarPago {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#modalProcesarPago .modal-content {
+  background-color: #000000;
+  border: 1px solid #ffffff; /* Borde color morado */
+  border-radius: 20px; /* Bordes redondeados */
+  margin: 10% auto;
+  padding: 30px;
+  width: 80%;
+  max-width: 400px; /* Ancho máximo para evitar que sea demasiado ancho en pantallas grandes */
+  position: relative;
+  color: #f2f2f2;
+}
+
+#modalProcesarPago .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #800080; /* Color morado para el botón de cierre */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#modalProcesarPago .close:hover,
+#modalProcesarPago .close:focus {
+  color: #660066; /* Tonos más oscuros al pasar el mouse o en foco */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Estilos específicos para el botón de pago efectivo */
+#pagoEfectivoBtn {
+  background-color: #800080;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#pagoEfectivoBtn:hover {
+  background-color: #ffffff; /* Tonos más oscuros al pasar el mouse */
+  color: #000000;
+}
+
+/* Estilos para el campo de monto en efectivo y botón de confirmar pago en efectivo */
+#montoEfectivo,
+#confirmarPagoEfectivoBtn {
+  display: none;
+  margin-top: 10px;
+}
+
+#confirmarPagoEfectivoBtn {
+  background-color: #800080;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#confirmarPagoEfectivoBtn:hover {
+  background-color: #800080;
+}
+
+.producto-agregado {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto-agregado:hover {
+  transform: scale(1.03); /* Escala del 3% al pasar el mouse */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra más suave al pasar el mouse */
 }
