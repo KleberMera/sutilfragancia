@@ -1,5 +1,3 @@
-/* Agregado en styleAgregados.css */
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -97,6 +95,7 @@ section {
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   background-color: #f8f8f8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .producto-agregado h3 {
@@ -303,26 +302,13 @@ section {
   cursor: pointer;
 }
 
-/* Estilos específicos para el botón de pago efectivo */
-#pagoEfectivoBtn {
-  background-color: #800080;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 10px;
+/* Estilos para la sección de pago en efectivo */
+.pago-efectivo {
+  display: none;
 }
 
-#pagoEfectivoBtn:hover {
-  background-color: #ffffff; /* Tonos más oscuros al pasar el mouse */
-  color: #000000;
-}
-
-/* Estilos para el campo de monto en efectivo y botón de confirmar pago en efectivo */
 #montoEfectivo,
 #confirmarPagoEfectivoBtn {
-  display: none;
   margin-top: 10px;
 }
 
@@ -340,11 +326,12 @@ section {
   background-color: #800080;
 }
 
-.producto-agregado {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+
 
 .producto-agregado:hover {
   transform: scale(1.03); /* Escala del 3% al pasar el mouse */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra más suave al pasar el mouse */
 }
+
+/* Estilos para la sección de pago en efectivo */
+

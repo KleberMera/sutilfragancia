@@ -108,6 +108,43 @@
         </div>
       </div>
 
+      <!-- Sección para pago en efectivo -->
+      <!-- Sección para pago en efectivo -->
+      <section class="pago-efectivo" style="display: none">
+        <h3>Pago en Efectivo</h3>
+        <p>Ingrese el monto en efectivo:</p>
+        <input type="text" id="montoEfectivo" placeholder="Monto en efectivo" />
+        <button id="confirmarPagoEfectivoBtn" class="btn-modal">
+          Confirmar Pago en Efectivo
+        </button>
+      </section>
+
+      <!-- Sección para mostrar el recibo -->
+      <section class="recibo" style="display: none">
+        <h2>Sutil Fragancias</h2>
+        <p>Pago Realizado</p>
+        <p id="fechaHora"></p>
+        <p id="cliente"></p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Productos</th>
+              <th>Cantidad</th>
+              <th>Subtotal</th>
+            </tr>
+          </thead>
+          <tbody id="detalleProductos"></tbody>
+        </table>
+
+        <p id="totalRecibo"></p>
+
+        <button id="imprimirReciboBtn" class="btn-modal">
+          Imprimir Recibo
+        </button>
+        <button id="aceptarReciboBtn" class="btn-modal">Aceptar</button>
+      </section>
+
       <section class="recibo" style="display: none">
         <h2>Sutil Fragancias</h2>
         <p>Pago Realizado</p>
@@ -155,5 +192,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="JS/scriptAgregados.js"></script>
+    <script src="JS/scriptEfectivo.js"></script>
   </body>
 </html>
